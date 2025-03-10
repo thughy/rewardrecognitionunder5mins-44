@@ -29,6 +29,9 @@ interface CompletedSurvey {
   completed: boolean;
 }
 
+// Common type that can be either survey type
+type Survey = ActiveSurvey | CompletedSurvey;
+
 // Sample survey data with proper typing
 const activeSurveys: ActiveSurvey[] = [
   {
@@ -291,7 +294,7 @@ const Surveys: React.FC = () => {
         
         <TabsContent value="all" className="space-y-4">
           <div className="grid gap-4 md:grid-cols-2">
-            {[...activeSurveys, ...completedSurveys].map(survey => (
+            {[...activeSurveys, ...completedSurveys].map((survey) => (
               <Card key={survey.id}>
                 <CardHeader>
                   <div className="flex justify-between items-start">
@@ -299,7 +302,7 @@ const Surveys: React.FC = () => {
                       <CardTitle>{survey.title}</CardTitle>
                       <CardDescription>{survey.description}</CardDescription>
                     </div>
-                    {'completed' in survey ? (
+                    {'completedOn' in survey ? (
                       <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
                         Completed
                       </Badge>
@@ -312,7 +315,7 @@ const Surveys: React.FC = () => {
                   </div>
                 </CardHeader>
                 <CardFooter>
-                  {'completed' in survey ? (
+                  {'completedOn' in survey ? (
                     <Button variant="outline" className="w-full">
                       <Send className="mr-2 h-4 w-4" />
                       View Responses
