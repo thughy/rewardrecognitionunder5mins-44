@@ -15,6 +15,38 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 
+// Sample notification data
+const notifications = [
+  {
+    id: 1,
+    title: 'New Recognition',
+    description: 'Alex recognized you for your teamwork!',
+    time: '10 minutes ago',
+    read: false
+  },
+  {
+    id: 2,
+    title: 'Points Added',
+    description: 'You received 25 points for completing a project.',
+    time: '2 hours ago',
+    read: false
+  },
+  {
+    id: 3,
+    title: 'Upcoming Anniversary',
+    description: 'Your 2-year work anniversary is next week.',
+    time: '1 day ago',
+    read: true
+  },
+  {
+    id: 4, 
+    title: 'Reward Reminder',
+    description: 'Don\'t forget to redeem your points before they expire!',
+    time: '3 days ago',
+    read: true
+  }
+];
+
 export function Navbar() {
   return (
     <header className="border-b bg-background sticky top-0 z-30">
@@ -49,10 +81,50 @@ export function Navbar() {
         </div>
         
         <div className="flex items-center gap-4">
-          <Button variant="ghost" size="icon" className="relative">
-            <Bell className="h-5 w-5" />
-            <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-bucketlist-blue animate-ping"></span>
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="relative">
+                <Bell className="h-5 w-5" />
+                {notifications.some(n => !n.read) && (
+                  <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-bucketlist-blue animate-ping"></span>
+                )}
+                <span className="sr-only">Notifications</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-80" align="end">
+              <DropdownMenuLabel className="flex justify-between items-center">
+                <span>Notifications</span>
+                <Badge variant="outline" className="text-xs">
+                  {notifications.filter(n => !n.read).length} new
+                </Badge>
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              {notifications.length > 0 ? (
+                <>
+                  {notifications.map((notification) => (
+                    <DropdownMenuItem key={notification.id} className="flex flex-col items-start p-3 cursor-pointer">
+                      <div className="flex w-full justify-between">
+                        <span className="font-medium">{notification.title}</span>
+                        <span className="text-xs text-muted-foreground">{notification.time}</span>
+                      </div>
+                      <span className="text-sm text-muted-foreground">{notification.description}</span>
+                      {!notification.read && (
+                        <div className="h-2 w-2 rounded-full bg-bucketlist-blue mt-1"></div>
+                      )}
+                    </DropdownMenuItem>
+                  ))}
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem className="justify-center font-medium text-bucketlist-blue">
+                    View all notifications
+                  </DropdownMenuItem>
+                </>
+              ) : (
+                <div className="py-6 text-center">
+                  <p className="text-sm text-muted-foreground">No notifications yet</p>
+                </div>
+              )}
+            </DropdownMenuContent>
+          </DropdownMenu>
           
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
