@@ -4,6 +4,9 @@ import { Link, useLocation } from 'react-router-dom';
 import { 
   Award, 
   BarChart, 
+  Building,
+  Clipboard,
+  Flag,
   Gift, 
   Home, 
   MessageSquarePlus, 
@@ -50,6 +53,16 @@ const mainNavItems = [
     title: 'Leaderboard',
     url: '/leaderboard',
     icon: Award,
+  },
+  {
+    title: 'Surveys',
+    url: '/surveys',
+    icon: Clipboard,
+  },
+  {
+    title: 'Employer Branding',
+    url: '/employer-branding',
+    icon: Flag,
   },
 ];
 

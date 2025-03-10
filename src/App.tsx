@@ -10,6 +10,8 @@ import Feed from "./pages/Feed";
 import Recognize from "./pages/Recognize";
 import Rewards from "./pages/Rewards";
 import Leaderboard from "./pages/Leaderboard";
+import Surveys from "./pages/Surveys";
+import EmployerBranding from "./pages/EmployerBranding";
 import Analytics from "./pages/admin/Analytics";
 import Settings from "./pages/admin/Settings";
 import NotFound from "./pages/NotFound";
@@ -29,6 +31,8 @@ const App = () => (
             <Route path="/recognize" element={<Recognize />} />
             <Route path="/rewards" element={<Rewards />} />
             <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route path="/surveys" element={<Surveys />} />
+            <Route path="/employer-branding" element={<EmployerBranding />} />
             <Route path="/admin/analytics" element={<Analytics />} />
             <Route path="/admin/settings" element={<Settings />} />
           </Route>
