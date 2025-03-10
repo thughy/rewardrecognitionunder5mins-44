@@ -74,9 +74,9 @@ export function AppSidebar() {
       <SidebarHeader className="flex items-center justify-center py-4">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-full bg-beekeeper-yellow flex items-center justify-center">
-            <span className="text-beekeeper-black font-bold">B</span>
+            <span className="text-beekeeper-black font-bold">P</span>
           </div>
-          <h1 className="text-lg font-bold">Beekeeper</h1>
+          <h1 className="text-lg font-bold">Pato's Holding Corp.</h1>
         </div>
       </SidebarHeader>
       

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -40,7 +41,7 @@ const Settings: React.FC = () => {
               
               <div className="space-y-2">
                 <Label htmlFor="points-name">Points Currency Name</Label>
-                <Input id="points-name" defaultValue="Bee Points" />
+                <Input id="points-name" defaultValue="Pato Points" />
               </div>
               
               <div className="space-y-2">
@@ -205,14 +206,14 @@ const Settings: React.FC = () => {
         <TabsContent value="integration" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Beekeeper Integration</CardTitle>
+              <CardTitle>Pato's Holding Corp. Integration</CardTitle>
               <CardDescription>
-                Configure how Bucketlist Rewards integrates with Beekeeper
+                Configure how Bucketlist Rewards integrates with Pato's Holding Corp.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="bg-green-50 text-green-700 p-3 rounded-md text-sm">
-                Integration status: Connected to Beekeeper
+                Integration status: Connected to Pato's Holding Corp.
               </div>
               
               <div className="space-y-2">
@@ -227,7 +228,7 @@ const Settings: React.FC = () => {
                 <Label>Activity Feed Integration</Label>
                 <div className="flex items-center space-x-2">
                   <Switch id="feed-integration" defaultChecked />
-                  <Label htmlFor="feed-integration">Post recognitions to Beekeeper activity feed</Label>
+                  <Label htmlFor="feed-integration">Post recognitions to Pato's Holding Corp. activity feed</Label>
                 </div>
               </div>
               
@@ -235,7 +236,7 @@ const Settings: React.FC = () => {
                 <Label>User Synchronization</Label>
                 <div className="flex items-center space-x-2">
                   <Switch id="user-sync" defaultChecked />
-                  <Label htmlFor="user-sync">Automatically sync user profiles from Beekeeper</Label>
+                  <Label htmlFor="user-sync">Automatically sync user profiles from Pato's Holding Corp.</Label>
                 </div>
               </div>
             </CardContent>
