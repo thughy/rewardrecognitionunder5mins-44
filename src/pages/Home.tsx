@@ -124,7 +124,7 @@ const Home: React.FC = () => {
               Celebrate your colleagues' special moments
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pb-4">
             <div className="space-y-4">
               <div className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
                 <div className="flex items-center gap-3">

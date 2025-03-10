@@ -67,7 +67,7 @@ export const BarChart = ({
       <RechartsBarChart
         data={data}
         layout={isHorizontal ? "vertical" : "horizontal"}
-        margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+        margin={{ top: 10, right: 10, left: 0, bottom: 10 }}
       >
         {showGridLines && <CartesianGrid strokeDasharray="3 3" />}
         {!isHorizontal ? (
@@ -154,7 +154,7 @@ export const LineChart = ({
     >
       <RechartsLineChart
         data={data}
-        margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+        margin={{ top: 10, right: 10, left: 0, bottom: 10 }}
       >
         {showGridLines && <CartesianGrid strokeDasharray="3 3" />}
         <XAxis

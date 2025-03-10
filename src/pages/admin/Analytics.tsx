@@ -34,9 +34,9 @@ const Analytics: React.FC = () => {
           <TabsTrigger value="roi">ROI & Platform Features</TabsTrigger>
         </TabsList>
         
-        <TabsContent value="activity" className="mt-0">
+        <TabsContent value="activity" className="mt-0 space-y-6">
           {/* KPI Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium">Total Recognitions</CardTitle>
@@ -75,7 +75,7 @@ const Analytics: React.FC = () => {
           </div>
           
           {/* Recognition Trends */}
-          <Card className="mb-6">
+          <Card>
             <CardHeader>
               <CardTitle>Recognition Trends</CardTitle>
               <CardDescription>
@@ -91,7 +91,7 @@ const Analytics: React.FC = () => {
                 </TabsList>
                 
                 <TabsContent value="recognitions" className="mt-0">
-                  <div className="h-[300px] w-full">
+                  <div className="h-[300px] w-full" style={{ minHeight: '300px' }}>
                     <LineChart
                       data={[
                         { name: 'Jan', value: 100 },
@@ -116,7 +116,7 @@ const Analytics: React.FC = () => {
                 </TabsContent>
                 
                 <TabsContent value="engagement" className="mt-0">
-                  <div className="h-[300px] w-full">
+                  <div className="h-[300px] w-full" style={{ minHeight: '300px' }}>
                     <BarChart
                       data={[
                         { name: 'Engineering', value: 84 },
@@ -135,7 +135,7 @@ const Analytics: React.FC = () => {
                 </TabsContent>
                 
                 <TabsContent value="redemptions" className="mt-0">
-                  <div className="h-[300px] w-full flex items-center justify-center">
+                  <div className="h-[300px] w-full flex items-center justify-center" style={{ minHeight: '300px' }}>
                     <PieChart
                       data={[
                         { name: 'Gift Cards', value: 45 },
@@ -153,7 +153,7 @@ const Analytics: React.FC = () => {
           </Card>
           
           {/* Key Events Tracking */}
-          <Card className="mb-6">
+          <Card>
             <CardHeader className="flex flex-row items-center justify-between">
               <div>
                 <CardTitle>Key Events & Milestones</CardTitle>
@@ -280,7 +280,7 @@ const Analytics: React.FC = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="h-[240px]">
+                <div className="h-[240px]" style={{ minHeight: '240px' }}>
                   <BarChart
                     data={[
                       { name: 'Teamwork', value: 35 },
@@ -305,7 +305,7 @@ const Analytics: React.FC = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="h-[240px] flex items-center justify-center">
+                <div className="h-[240px] flex items-center justify-center" style={{ minHeight: '240px' }}>
                   <PieChart
                     data={[
                       { name: 'Engineering', value: 30 },
@@ -322,9 +322,9 @@ const Analytics: React.FC = () => {
           </div>
         </TabsContent>
         
-        <TabsContent value="roi" className="mt-0">
+        <TabsContent value="roi" className="mt-0 space-y-6">
           {/* ROI Overview */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium flex items-center gap-2">
@@ -372,7 +372,7 @@ const Analytics: React.FC = () => {
           </div>
           
           {/* ROI Dashboard */}
-          <Card className="mb-6">
+          <Card>
             <CardHeader>
               <CardTitle>ROI Dashboard</CardTitle>
               <CardDescription>
@@ -480,11 +480,11 @@ const Analytics: React.FC = () => {
                   <TabsTrigger value="productivity">Productivity</TabsTrigger>
                 </TabsList>
                 
-                <TabsContent value="engagement">
+                <TabsContent value="engagement" className="mt-0">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-4">
                       <h3 className="text-lg font-medium">Engagement Metrics</h3>
-                      <div className="h-60">
+                      <div className="h-[240px]" style={{ minHeight: '240px' }}>
                         <LineChart
                           data={[
                             { name: 'Q1', value: 65, industry: 52 },
@@ -563,9 +563,9 @@ const Analytics: React.FC = () => {
                   </div>
                 </TabsContent>
                 
-                <TabsContent value="retention">
+                <TabsContent value="retention" className="mt-0">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="h-60">
+                    <div className="h-[240px]" style={{ minHeight: '240px' }}>
                       <LineChart
                         data={[
                           { name: '2020', value: 16, industry: 22 },
@@ -599,7 +599,7 @@ const Analytics: React.FC = () => {
                   </div>
                 </TabsContent>
                 
-                <TabsContent value="productivity">
+                <TabsContent value="productivity" className="mt-0">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-4">
                       <h3 className="text-lg font-medium">Productivity Metrics</h3>
@@ -686,3 +686,4 @@ const Analytics: React.FC = () => {
 };
 
 export default Analytics;
+
