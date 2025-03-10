@@ -1,11 +1,15 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Clipboard, Clock, FileText, Send } from 'lucide-react';
+import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 // Define proper types for surveys
 interface ActiveSurvey {
@@ -63,6 +67,45 @@ const completedSurveys: CompletedSurvey[] = [
 ];
 
 const Surveys: React.FC = () => {
+  const [newSurvey, setNewSurvey] = useState({
+    title: '',
+    description: '',
+    deadline: '',
+    targetAudience: 'all'
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setNewSurvey(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSelectChange = (value: string) => {
+    setNewSurvey(prev => ({
+      ...prev,
+      targetAudience: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Survey created:', newSurvey);
+    // Here you would typically save the new survey to your backend
+    // and update the local state or trigger a refetch
+    
+    // Reset the form
+    setNewSurvey({
+      title: '',
+      description: '',
+      deadline: '',
+      targetAudience: 'all'
+    });
+
+    // This would close the sheet in a real implementation
+  };
+
   return (
     <div className="space-y-6 animate-fade-in">
       <div className="flex justify-between items-center">
@@ -70,10 +113,91 @@ const Surveys: React.FC = () => {
           <h1 className="text-2xl font-bold tracking-tight">Employee Surveys</h1>
           <p className="text-muted-foreground">Share your voice and help shape our workplace</p>
         </div>
-        <Button className="bg-bucketlist-blue hover:bg-bucketlist-indigo">
-          <FileText className="mr-2 h-4 w-4" />
-          Create Survey
-        </Button>
+        
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button className="bg-bucketlist-blue hover:bg-bucketlist-indigo">
+              <FileText className="mr-2 h-4 w-4" />
+              Create Survey
+            </Button>
+          </SheetTrigger>
+          <SheetContent className="sm:max-w-md">
+            <SheetHeader>
+              <SheetTitle>Create New Survey</SheetTitle>
+              <SheetDescription>
+                Create and deploy a new survey to gather feedback from your team.
+              </SheetDescription>
+            </SheetHeader>
+            
+            <form onSubmit={handleSubmit} className="space-y-4 py-4">
+              <div className="space-y-2">
+                <label htmlFor="title" className="text-sm font-medium">
+                  Survey Title
+                </label>
+                <Input 
+                  id="title" 
+                  name="title" 
+                  value={newSurvey.title} 
+                  onChange={handleInputChange} 
+                  placeholder="e.g. Employee Satisfaction Survey" 
+                  required 
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="description" className="text-sm font-medium">
+                  Description
+                </label>
+                <Textarea 
+                  id="description" 
+                  name="description" 
+                  value={newSurvey.description} 
+                  onChange={handleInputChange} 
+                  placeholder="Briefly describe the purpose of this survey" 
+                  required 
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="deadline" className="text-sm font-medium">
+                  Deadline
+                </label>
+                <Input 
+                  id="deadline" 
+                  name="deadline" 
+                  type="date" 
+                  value={newSurvey.deadline} 
+                  onChange={handleInputChange} 
+                  required 
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="targetAudience" className="text-sm font-medium">
+                  Target Audience
+                </label>
+                <Select 
+                  value={newSurvey.targetAudience} 
+                  onValueChange={handleSelectChange}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select audience" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Employees</SelectItem>
+                    <SelectItem value="department">By Department</SelectItem>
+                    <SelectItem value="location">By Location</SelectItem>
+                    <SelectItem value="custom">Custom Group</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <SheetFooter className="pt-4">
+                <Button type="submit" className="w-full">Create Survey</Button>
+              </SheetFooter>
+            </form>
+          </SheetContent>
+        </Sheet>
       </div>
 
       <Tabs defaultValue="active" className="space-y-4">
