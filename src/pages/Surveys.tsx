@@ -7,8 +7,26 @@ import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Clipboard, Clock, FileText, Send } from 'lucide-react';
 
-// Sample survey data
-const activeSurveys = [
+// Define proper types for surveys
+interface ActiveSurvey {
+  id: number;
+  title: string;
+  description: string;
+  deadline: string;
+  completed: boolean;
+  progress: number;
+}
+
+interface CompletedSurvey {
+  id: number;
+  title: string;
+  description: string;
+  completedOn: string;
+  completed: boolean;
+}
+
+// Sample survey data with proper typing
+const activeSurveys: ActiveSurvey[] = [
   {
     id: 1,
     title: 'Q4 Employee Engagement Survey',
@@ -27,7 +45,7 @@ const activeSurveys = [
   },
 ];
 
-const completedSurveys = [
+const completedSurveys: CompletedSurvey[] = [
   {
     id: 3,
     title: 'Annual Benefits Review',
