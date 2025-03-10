@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Award, Gift, MessageSquarePlus, TrendingUp, Users } from 'lucide-react';
+import { Award, Gift, MessageSquarePlus, TrendingUp } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
@@ -129,7 +129,7 @@ const Home: React.FC = () => {
               <div className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-bucketlist-lightBlue flex items-center justify-center">
-                    <Users className="h-5 w-5 text-bucketlist-blue" />
+                    <Award className="h-5 w-5 text-bucketlist-blue" />
                   </div>
                   <div>
                     <p className="font-medium">Sarah Kim's Work Anniversary</p>
@@ -142,7 +142,7 @@ const Home: React.FC = () => {
               <div className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-bucketlist-lightBlue flex items-center justify-center">
-                    <Users className="h-5 w-5 text-bucketlist-blue" />
+                    <Award className="h-5 w-5 text-bucketlist-blue" />
                   </div>
                   <div>
                     <p className="font-medium">Mike Johnson's Birthday</p>

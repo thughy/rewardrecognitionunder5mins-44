@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -30,12 +29,12 @@ const Analytics: React.FC = () => {
       </div>
       
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid grid-cols-2 mb-8">
+        <TabsList className="grid grid-cols-2 mb-6">
           <TabsTrigger value="activity">Recognition & Activity</TabsTrigger>
           <TabsTrigger value="roi">ROI & Platform Features</TabsTrigger>
         </TabsList>
         
-        <TabsContent value="activity">
+        <TabsContent value="activity" className="mt-0">
           {/* KPI Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <Card>
@@ -84,15 +83,15 @@ const Analytics: React.FC = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Tabs defaultValue="recognitions">
+              <Tabs defaultValue="recognitions" className="w-full">
                 <TabsList className="mb-4">
                   <TabsTrigger value="recognitions">Recognitions</TabsTrigger>
                   <TabsTrigger value="engagement">Engagement</TabsTrigger>
                   <TabsTrigger value="redemptions">Redemptions</TabsTrigger>
                 </TabsList>
                 
-                <TabsContent value="recognitions">
-                  <div className="h-80">
+                <TabsContent value="recognitions" className="mt-0">
+                  <div className="h-[300px] w-full">
                     <LineChart
                       data={[
                         { name: 'Jan', value: 100 },
@@ -116,8 +115,8 @@ const Analytics: React.FC = () => {
                   </div>
                 </TabsContent>
                 
-                <TabsContent value="engagement">
-                  <div className="h-80">
+                <TabsContent value="engagement" className="mt-0">
+                  <div className="h-[300px] w-full">
                     <BarChart
                       data={[
                         { name: 'Engineering', value: 84 },
@@ -135,8 +134,8 @@ const Analytics: React.FC = () => {
                   </div>
                 </TabsContent>
                 
-                <TabsContent value="redemptions">
-                  <div className="h-80 flex items-center justify-center">
+                <TabsContent value="redemptions" className="mt-0">
+                  <div className="h-[300px] w-full flex items-center justify-center">
                     <PieChart
                       data={[
                         { name: 'Gift Cards', value: 45 },
@@ -168,14 +167,14 @@ const Analytics: React.FC = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <Tabs defaultValue="thisWeek">
+              <Tabs defaultValue="thisWeek" className="w-full">
                 <TabsList className="mb-4">
                   <TabsTrigger value="thisWeek">This Week</TabsTrigger>
                   <TabsTrigger value="thisMonth">This Month</TabsTrigger>
                   <TabsTrigger value="upcoming">Upcoming</TabsTrigger>
                 </TabsList>
                 
-                <TabsContent value="thisWeek">
+                <TabsContent value="thisWeek" className="mt-0">
                   <div className="space-y-4">
                     {[
                       { type: 'Birthday', name: 'Sarah Johnson', department: 'Marketing', date: 'Today', years: null },
@@ -206,7 +205,7 @@ const Analytics: React.FC = () => {
                   </div>
                 </TabsContent>
                 
-                <TabsContent value="thisMonth">
+                <TabsContent value="thisMonth" className="mt-0">
                   <div className="space-y-4">
                     {[
                       { type: 'Birthday', name: 'Jessica Lee', department: 'Design', date: 'June 15', years: null },
@@ -238,7 +237,7 @@ const Analytics: React.FC = () => {
                   </div>
                 </TabsContent>
                 
-                <TabsContent value="upcoming">
+                <TabsContent value="upcoming" className="mt-0">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Card>
                       <CardHeader className="pb-2">
@@ -281,7 +280,7 @@ const Analytics: React.FC = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="h-60">
+                <div className="h-[240px]">
                   <BarChart
                     data={[
                       { name: 'Teamwork', value: 35 },
@@ -306,7 +305,7 @@ const Analytics: React.FC = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="h-60 flex items-center justify-center">
+                <div className="h-[240px] flex items-center justify-center">
                   <PieChart
                     data={[
                       { name: 'Engineering', value: 30 },
@@ -323,7 +322,7 @@ const Analytics: React.FC = () => {
           </div>
         </TabsContent>
         
-        <TabsContent value="roi">
+        <TabsContent value="roi" className="mt-0">
           {/* ROI Overview */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <Card>
@@ -513,7 +512,7 @@ const Analytics: React.FC = () => {
                     
                     <div className="grid gap-4">
                       <Card>
-                        <CardHeader className="pb-2">
+                        <CardHeader>
                           <CardTitle className="text-sm font-medium">Pulse Survey Results</CardTitle>
                         </CardHeader>
                         <CardContent>
