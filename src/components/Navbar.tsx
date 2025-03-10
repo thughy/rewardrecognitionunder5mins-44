@@ -57,8 +57,8 @@ export function Navbar() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-                <Avatar className="h-8 w-8">
-                  <AvatarImage src="/placeholder.svg" alt="User" />
+                <Avatar className="h-8 w-8 border border-gray-200">
+                  <AvatarImage src="/lovable-uploads/fed439f3-6d57-4068-af61-3f0562732bd4.png" alt="John Doe" />
                   <AvatarFallback className="bg-beekeeper-yellow text-beekeeper-black">JD</AvatarFallback>
                 </Avatar>
               </Button>
