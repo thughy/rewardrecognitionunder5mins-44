@@ -6,12 +6,13 @@ import {
   BarChart, 
   Building,
   Clipboard,
-  Flag,
+  Flag, 
   Gift, 
   Home, 
   MessageSquarePlus, 
   Settings, 
-  Zap
+  Zap,
+  Briefcase
 } from 'lucide-react';
 import {
   Sidebar,
@@ -62,7 +63,8 @@ const mainNavItems = [
   {
     title: 'Employer Branding',
     url: '/employer-branding',
-    icon: Flag,
+    icon: Briefcase, // Changed from Flag to Briefcase for better representation
+    highlight: true,
   },
 ];
 
@@ -103,7 +105,8 @@ export function AppSidebar() {
                   <SidebarMenuButton
                     asChild
                     className={cn(
-                      location.pathname === item.url && "bg-accent text-accent-foreground"
+                      location.pathname === item.url && "bg-accent text-accent-foreground",
+                      item.highlight && "relative overflow-visible after:absolute after:top-1 after:right-1 after:h-2 after:w-2 after:rounded-full after:bg-blue-500 after:animate-pulse"
                     )}
                   >
                     <Link to={item.url}>
