@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -22,6 +21,7 @@ const Settings: React.FC = () => {
           <TabsTrigger value="rewards">Rewards</TabsTrigger>
           <TabsTrigger value="notifications">Notifications</TabsTrigger>
           <TabsTrigger value="integration">Integration</TabsTrigger>
+          <TabsTrigger value="hris">HRIS & Integrations</TabsTrigger>
         </TabsList>
         
         <TabsContent value="general" className="space-y-4">
@@ -242,6 +242,52 @@ const Settings: React.FC = () => {
             <CardFooter>
               <Button>Save Integration Settings</Button>
             </CardFooter>
+          </Card>
+        </TabsContent>
+        
+        <TabsContent value="hris" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>HR Systems Integration</CardTitle>
+              <CardDescription>
+                Connect your HR systems to automate employee data synchronization
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between p-4 border rounded-lg">
+                  <div className="space-y-1">
+                    <h4 className="font-semibold">Workday HRIS</h4>
+                    <p className="text-sm text-muted-foreground">Sync employee profiles and org structure</p>
+                  </div>
+                  <Button variant="outline">Connect</Button>
+                </div>
+
+                <div className="flex items-center justify-between p-4 border rounded-lg">
+                  <div className="space-y-1">
+                    <h4 className="font-semibold">ADP Payroll</h4>
+                    <p className="text-sm text-muted-foreground">Integration for rewards redemption and points tracking</p>
+                  </div>
+                  <Button variant="outline">Connect</Button>
+                </div>
+
+                <div className="flex items-center justify-between p-4 border rounded-lg">
+                  <div className="space-y-1">
+                    <h4 className="font-semibold">Cornerstone LMS</h4>
+                    <p className="text-sm text-muted-foreground">Connect learning achievements with rewards</p>
+                  </div>
+                  <Button variant="outline">Connect</Button>
+                </div>
+
+                <div className="flex items-center justify-between p-4 border rounded-lg">
+                  <div className="space-y-1">
+                    <h4 className="font-semibold">BambooHR</h4>
+                    <p className="text-sm text-muted-foreground">Employee data and milestone tracking</p>
+                  </div>
+                  <Button variant="outline">Connect</Button>
+                </div>
+              </div>
+            </CardContent>
           </Card>
         </TabsContent>
       </Tabs>
