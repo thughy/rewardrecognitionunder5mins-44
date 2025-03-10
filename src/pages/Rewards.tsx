@@ -65,8 +65,12 @@ const Rewards: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <Card className="hover:shadow-md transition-shadow duration-300">
               <CardHeader className="pb-2">
-                <div className="w-full h-40 bg-muted rounded-md flex items-center justify-center">
-                  <Coffee className="h-12 w-12 text-muted-foreground" />
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&q=80&w=800" 
+                    alt="Coffee shop gift card" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </CardHeader>
               <CardContent>
@@ -83,8 +87,12 @@ const Rewards: React.FC = () => {
             
             <Card className="hover:shadow-md transition-shadow duration-300">
               <CardHeader className="pb-2">
-                <div className="w-full h-40 bg-muted rounded-md flex items-center justify-center">
-                  <ShoppingBag className="h-12 w-12 text-muted-foreground" />
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&q=80&w=800" 
+                    alt="Company swag bundle" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </CardHeader>
               <CardContent>
@@ -101,8 +109,12 @@ const Rewards: React.FC = () => {
             
             <Card className="hover:shadow-md transition-shadow duration-300">
               <CardHeader className="pb-2">
-                <div className="w-full h-40 bg-muted rounded-md flex items-center justify-center">
-                  <Ticket className="h-12 w-12 text-muted-foreground" />
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1466721591366-2d5fba72006d?auto=format&fit=crop&q=80&w=800" 
+                    alt="Movie tickets" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </CardHeader>
               <CardContent>
@@ -120,10 +132,46 @@ const Rewards: React.FC = () => {
         </TabsContent>
         
         <TabsContent value="experiences">
-          <div className="text-center py-12 text-muted-foreground">
-            <Trophy className="h-12 w-12 mx-auto mb-4" />
-            <h3 className="text-xl font-medium mb-2">More Experiences Coming Soon!</h3>
-            <p>Check back for exciting new experiences you can redeem with your points.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?auto=format&fit=crop&q=80&w=800" 
+                    alt="Wildlife sanctuary visit" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Wildlife Sanctuary Visit</CardTitle>
+                <CardDescription className="mt-2">
+                  Enjoy a day at the local wildlife sanctuary with a plus one
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1200 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-shadow duration-300 opacity-60">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md flex items-center justify-center">
+                  <Trophy className="h-12 w-12 text-muted-foreground" />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">More Experiences Coming Soon</CardTitle>
+                <CardDescription className="mt-2">
+                  Check back for exciting new experiences you can redeem
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">??? Points</div>
+                <Button variant="outline" disabled>Coming Soon</Button>
+              </CardFooter>
+            </Card>
           </div>
         </TabsContent>
         

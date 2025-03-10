@@ -15,8 +15,16 @@ interface RecognitionFeedProps {
 const recognitions = [
   {
     id: 1,
-    from: { name: 'Sarah Kim', avatar: '/placeholder.svg', avatarFallback: 'SK' },
-    to: { name: 'John Doe', avatar: '/placeholder.svg', avatarFallback: 'JD' },
+    from: { 
+      name: 'Sarah Kim', 
+      avatar: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=250', 
+      avatarFallback: 'SK' 
+    },
+    to: { 
+      name: 'John Doe', 
+      avatar: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=250', 
+      avatarFallback: 'JD' 
+    },
     message: 'Thanks for helping me debug that tricky issue. Your expertise saved me hours of frustration!',
     value: 'teamwork',
     points: 50,
@@ -26,8 +34,16 @@ const recognitions = [
   },
   {
     id: 2,
-    from: { name: 'David Wilson', avatar: '/placeholder.svg', avatarFallback: 'DW' },
-    to: { name: 'Emily Chen', avatar: '/placeholder.svg', avatarFallback: 'EC' },
+    from: { 
+      name: 'David Wilson', 
+      avatar: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=250', 
+      avatarFallback: 'DW' 
+    },
+    to: { 
+      name: 'Emily Chen', 
+      avatar: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=250', 
+      avatarFallback: 'EC' 
+    },
     message: 'Your presentation to the client today was exceptional. You really showcased our value proposition clearly!',
     value: 'excellence',
     points: 75,
@@ -37,8 +53,16 @@ const recognitions = [
   },
   {
     id: 3,
-    from: { name: 'James Taylor', avatar: '/placeholder.svg', avatarFallback: 'JT' },
-    to: { name: 'Maria Garcia', avatar: '/placeholder.svg', avatarFallback: 'MG' },
+    from: { 
+      name: 'James Taylor', 
+      avatar: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'JT' 
+    },
+    to: { 
+      name: 'Maria Garcia', 
+      avatar: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'MG' 
+    },
     message: 'Your creative solution to the packaging problem will save us 20% in materials. Great innovation!',
     value: 'innovation',
     points: 100,
@@ -48,8 +72,16 @@ const recognitions = [
   },
   {
     id: 4,
-    from: { name: 'Lisa Brown', avatar: '/placeholder.svg', avatarFallback: 'LB' },
-    to: { name: 'Robert Lee', avatar: '/placeholder.svg', avatarFallback: 'RL' },
+    from: { 
+      name: 'Lisa Brown', 
+      avatar: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'LB' 
+    },
+    to: { 
+      name: 'Robert Lee', 
+      avatar: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'RL' 
+    },
     message: 'Thanks for staying late to help that customer with their urgent issue. Your dedication is inspiring!',
     value: 'customer',
     points: 50,

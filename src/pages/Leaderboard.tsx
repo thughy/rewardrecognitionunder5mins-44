@@ -7,16 +7,86 @@ import { Medal, Trophy, Award } from 'lucide-react';
 
 const Leaderboard: React.FC = () => {
   const leaders = [
-    { id: 1, name: 'Sarah Kim', department: 'Marketing', points: 1250, avatarFallback: 'SK' },
-    { id: 2, name: 'John Reynolds', department: 'Sales', points: 1120, avatarFallback: 'JR' },
-    { id: 3, name: 'Emily Chen', department: 'Engineering', points: 980, avatarFallback: 'EC' },
-    { id: 4, name: 'David Wilson', department: 'Customer Support', points: 840, avatarFallback: 'DW' },
-    { id: 5, name: 'Maria Garcia', department: 'HR', points: 780, avatarFallback: 'MG' },
-    { id: 6, name: 'James Taylor', department: 'Operations', points: 750, avatarFallback: 'JT' },
-    { id: 7, name: 'Lisa Brown', department: 'Engineering', points: 720, avatarFallback: 'LB' },
-    { id: 8, name: 'Robert Lee', department: 'Finance', points: 650, avatarFallback: 'RL' },
-    { id: 9, name: 'Jennifer Lopez', department: 'Marketing', points: 630, avatarFallback: 'JL' },
-    { id: 10, name: 'Michael Scott', department: 'Sales', points: 590, avatarFallback: 'MS' },
+    { 
+      id: 1, 
+      name: 'Sarah Kim', 
+      department: 'Marketing', 
+      points: 1250, 
+      avatar: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'SK' 
+    },
+    { 
+      id: 2, 
+      name: 'John Reynolds', 
+      department: 'Sales', 
+      points: 1120, 
+      avatar: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'JR' 
+    },
+    { 
+      id: 3, 
+      name: 'Emily Chen', 
+      department: 'Engineering', 
+      points: 980, 
+      avatar: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'EC' 
+    },
+    { 
+      id: 4, 
+      name: 'David Wilson', 
+      department: 'Customer Support', 
+      points: 840, 
+      avatar: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'DW' 
+    },
+    { 
+      id: 5, 
+      name: 'Maria Garcia', 
+      department: 'HR', 
+      points: 780, 
+      avatar: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'MG' 
+    },
+    { 
+      id: 6, 
+      name: 'James Taylor', 
+      department: 'Operations', 
+      points: 750, 
+      avatar: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'JT' 
+    },
+    { 
+      id: 7, 
+      name: 'Lisa Brown', 
+      department: 'Engineering', 
+      points: 720, 
+      avatar: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'LB' 
+    },
+    { 
+      id: 8, 
+      name: 'Robert Lee', 
+      department: 'Finance', 
+      points: 650, 
+      avatar: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'RL' 
+    },
+    { 
+      id: 9, 
+      name: 'Jennifer Lopez', 
+      department: 'Marketing', 
+      points: 630, 
+      avatar: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'JL' 
+    },
+    { 
+      id: 10, 
+      name: 'Michael Scott', 
+      department: 'Sales', 
+      points: 590, 
+      avatar: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=250',
+      avatarFallback: 'MS' 
+    },
   ];
 
   return (
@@ -92,7 +162,7 @@ const Leaderboard: React.FC = () => {
                       {index + 1}
                     </div>
                     <Avatar className="h-10 w-10 mr-3">
-                      <AvatarImage src="/placeholder.svg" alt={leader.name} />
+                      <AvatarImage src={leader.avatar} alt={leader.name} />
                       <AvatarFallback>{leader.avatarFallback}</AvatarFallback>
                     </Avatar>
                     <div className="flex-1">

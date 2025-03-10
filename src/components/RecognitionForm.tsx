@@ -16,11 +16,41 @@ import { useToast } from '@/hooks/use-toast';
 
 // Mock data for colleagues
 const colleagues = [
-  { id: 1, name: 'Emily Chen', department: 'Engineering', avatar: '/placeholder.svg', avatarFallback: 'EC' },
-  { id: 2, name: 'David Wilson', department: 'Customer Support', avatar: '/placeholder.svg', avatarFallback: 'DW' },
-  { id: 3, name: 'Maria Garcia', department: 'HR', avatar: '/placeholder.svg', avatarFallback: 'MG' },
-  { id: 4, name: 'James Taylor', department: 'Operations', avatar: '/placeholder.svg', avatarFallback: 'JT' },
-  { id: 5, name: 'Lisa Brown', department: 'Engineering', avatar: '/placeholder.svg', avatarFallback: 'LB' },
+  { 
+    id: 1, 
+    name: 'Emily Chen', 
+    department: 'Engineering', 
+    avatar: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=250', 
+    avatarFallback: 'EC' 
+  },
+  { 
+    id: 2, 
+    name: 'David Wilson', 
+    department: 'Customer Support', 
+    avatar: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=250', 
+    avatarFallback: 'DW' 
+  },
+  { 
+    id: 3, 
+    name: 'Maria Garcia', 
+    department: 'HR', 
+    avatar: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=250', 
+    avatarFallback: 'MG' 
+  },
+  { 
+    id: 4, 
+    name: 'James Taylor', 
+    department: 'Operations', 
+    avatar: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=250', 
+    avatarFallback: 'JT' 
+  },
+  { 
+    id: 5, 
+    name: 'Lisa Brown', 
+    department: 'Engineering', 
+    avatar: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=250', 
+    avatarFallback: 'LB' 
+  },
 ];
 
 export function RecognitionForm() {
