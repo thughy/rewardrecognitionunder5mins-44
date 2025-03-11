@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Bell, Menu, Search, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -47,7 +46,29 @@ const notifications = [
   }
 ];
 
+// Sample employee data that would come from an API in a real application
+const sampleEmployees = [
+  { id: 1, name: 'Emily Chen', avatar: '/placeholder.svg', initials: 'EC' },
+  { id: 2, name: 'John Smith', avatar: '/placeholder.svg', initials: 'JS' },
+  { id: 3, name: 'Maria Rodriguez', avatar: '/placeholder.svg', initials: 'MR' },
+  { id: 4, name: 'David Wilson', avatar: '/placeholder.svg', initials: 'DW' },
+  { id: 5, name: 'Sarah Kim', avatar: '/placeholder.svg', initials: 'SK' },
+  { id: 6, name: 'Robert Johnson', avatar: '/placeholder.svg', initials: 'RJ' },
+  { id: 7, name: 'Jennifer Lee', avatar: '/placeholder.svg', initials: 'JL' },
+  { id: 8, name: 'Michael Brown', avatar: '/placeholder.svg', initials: 'MB' },
+];
+
 export function Navbar() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+  
+  // Filter employees based on search input
+  const filteredEmployees = searchQuery.trim() === '' 
+    ? sampleEmployees 
+    : sampleEmployees.filter(emp => 
+        emp.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
   return (
     <header className="border-b bg-background sticky top-0 z-30">
       <div className="container flex h-16 items-center px-4">
@@ -76,7 +97,40 @@ export function Navbar() {
               type="search"
               placeholder="Search colleagues..."
               className="pl-8 focus-visible:ring-bucketlist-blue"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setIsSearchFocused(true)}
+              onBlur={() => {
+                // Delay hiding the dropdown to allow for clicking on options
+                setTimeout(() => setIsSearchFocused(false), 200);
+              }}
             />
+            {isSearchFocused && (
+              <div className="absolute top-full left-0 w-full bg-white shadow-md rounded-md border p-2 z-10 max-h-[300px] overflow-y-auto mt-1">
+                {filteredEmployees.length > 0 ? (
+                  filteredEmployees.map((employee) => (
+                    <div 
+                      key={employee.id}
+                      className="flex items-center gap-2 p-2 hover:bg-muted rounded cursor-pointer"
+                      onClick={() => {
+                        setSearchQuery(employee.name);
+                        setIsSearchFocused(false);
+                      }}
+                    >
+                      <Avatar className="h-6 w-6">
+                        <AvatarImage src={employee.avatar} alt={employee.name} />
+                        <AvatarFallback>{employee.initials}</AvatarFallback>
+                      </Avatar>
+                      <span className="text-sm">{employee.name}</span>
+                    </div>
+                  ))
+                ) : (
+                  <div className="p-2 text-center text-sm text-muted-foreground">
+                    No colleagues found
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
         
