@@ -2,7 +2,6 @@
 import React from 'react';
 import { TabsContent } from '@/components/ui/tabs';
 import RewardCard from './RewardCard';
-import { Gift } from 'lucide-react';
 
 interface GiftCardRewardsProps {
   availablePoints: number;
