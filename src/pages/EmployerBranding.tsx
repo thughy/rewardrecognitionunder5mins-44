@@ -46,12 +46,177 @@ const Tiktok = ({ className = "" }: { className?: string }) => (
   </svg>
 );
 
+// Array of employee success stories for easier management
+const employeeStories = [
+  {
+    id: 1,
+    name: "Maya Rodriguez",
+    avatar: "/lovable-uploads/cb168787-e2fc-48fc-a29a-8c867a963c05.png",
+    role: "Product Designer",
+    years: "3 years",
+    title: "Why I Love Working at Pato's Holding Corp.",
+    content: "The collaborative culture here has helped me grow as a designer. I've had the opportunity to work on impactful projects with amazing colleagues who are always willing to share their knowledge.",
+    highlight: {
+      title: "Career highlight:",
+      content: "Leading the design for our award-winning customer portal that increased user satisfaction by 35%."
+    },
+    likes: 142,
+    social: "LinkedIn",
+    featured: true
+  },
+  {
+    id: 2,
+    name: "John Doe",
+    avatar: "/lovable-uploads/fed439f3-6d57-4068-af61-3f0562732bd4.png",
+    role: "Engineering Lead",
+    years: "5 years",
+    title: "Growing with Pato's Tech Team",
+    content: "What started as a junior role has evolved into leading a team of brilliant engineers. The company's commitment to professional development and work-life balance has been instrumental in my growth.",
+    highlight: {
+      title: "Favorite perk:",
+      content: "The learning stipend that allowed me to attend tech conferences and take specialized courses."
+    },
+    likes: 98,
+    social: "TikTok",
+    featured: false
+  },
+  {
+    id: 3,
+    name: "Sarah Johnson",
+    avatar: "",
+    role: "Marketing Director",
+    years: "4 years",
+    title: "From Coordinator to Director: My Pato's Journey",
+    content: "When I joined as a marketing coordinator, I never imagined I'd be leading the department in just a few years. The mentorship I received and the trust placed in my ideas made all the difference.",
+    highlight: {
+      title: "Proudest achievement:",
+      content: "Developing our content strategy that doubled our audience engagement and led to 30% growth in lead generation."
+    },
+    likes: 127,
+    social: "Instagram",
+    featured: true
+  },
+  {
+    id: 4,
+    name: "Carlos Mendez",
+    avatar: "",
+    role: "Customer Success Manager",
+    years: "2 years",
+    title: "Customer Success at Pato's: More Than Just Support",
+    content: "I came from a traditional support role, but at Pato's, we're true partners to our clients. We're empowered to make decisions that truly help our customers succeed, not just solve their immediate problems.",
+    highlight: {
+      title: "Best team moment:",
+      content: "Collaborating across departments to save a major account, which led to them tripling their contract with us."
+    },
+    likes: 86,
+    social: "LinkedIn",
+    featured: false
+  },
+  {
+    id: 5,
+    name: "Aisha Patel",
+    avatar: "",
+    role: "Data Scientist",
+    years: "3.5 years",
+    title: "Building a Data-Driven Culture at Pato's",
+    content: "As one of the first data scientists hired, I've had the unique opportunity to help build our data infrastructure from the ground up and champion data-informed decision making across departments.",
+    highlight: {
+      title: "Biggest impact:",
+      content: "Creating predictive models that helped optimize our inventory management, reducing costs by 22% while improving availability."
+    },
+    likes: 112,
+    social: "LinkedIn",
+    featured: false
+  },
+  {
+    id: 6,
+    name: "Michael Chen",
+    avatar: "",
+    role: "HR Business Partner",
+    years: "6 years",
+    title: "Transforming HR Practices for the Modern Workplace",
+    content: "Being part of Pato's HR team has given me the chance to implement progressive people policies. We've moved beyond traditional HR to create a culture that truly supports employee wellbeing and growth.",
+    highlight: {
+      title: "Initiative I'm proud of:",
+      content: "Our flexible work policy that led to a 40% increase in employee satisfaction and 25% reduction in turnover."
+    },
+    likes: 94,
+    social: "Instagram",
+    featured: false
+  },
+  {
+    id: 7,
+    name: "Emma Wilson",
+    avatar: "",
+    role: "Finance Analyst",
+    years: "2.5 years",
+    title: "Not Your Typical Finance Department",
+    content: "Finance at Pato's isn't just about number crunching. We're strategic partners to every department, helping to drive business decisions with financial insights while maintaining a strong ethical foundation.",
+    highlight: {
+      title: "Learning experience:",
+      content: "Being mentored by our CFO directly through our company's leadership shadow program."
+    },
+    likes: 78,
+    social: "LinkedIn",
+    featured: false
+  },
+  {
+    id: 8,
+    name: "James Washington",
+    avatar: "",
+    role: "Sales Director",
+    years: "4.5 years",
+    title: "Ethical Sales and Authentic Relationships",
+    content: "Pato's approach to sales is refreshingly different. We focus on building genuine relationships and ensuring our solutions truly address customer needs, rather than just pushing for the close.",
+    highlight: {
+      title: "Why I stay:",
+      content: "The commission structure rewards customer satisfaction and retention as much as new sales, which aligns perfectly with my values."
+    },
+    likes: 105,
+    social: "TikTok",
+    featured: false
+  },
+  {
+    id: 9,
+    name: "Sofia Gonzalez",
+    avatar: "",
+    role: "Product Manager",
+    years: "3 years",
+    title: "Building Products That Make a Difference",
+    content: "At Pato's, product managers have a real voice in the company's direction. We're encouraged to think big, take calculated risks, and truly understand our users' needs before building features.",
+    highlight: {
+      title: "Milestone moment:",
+      content: "Launching our accessibility initiative that made our products more inclusive and opened up new market segments."
+    },
+    likes: 119,
+    social: "LinkedIn",
+    featured: true
+  },
+  {
+    id: 10,
+    name: "Raj Patil",
+    avatar: "",
+    role: "DevOps Engineer",
+    years: "2 years",
+    title: "Creating a Culture of Technical Excellence",
+    content: "The engineering culture at Pato's emphasizes both speed and quality. We've built a CI/CD pipeline that allows us to ship confidently multiple times a day while maintaining rock-solid reliability.",
+    highlight: {
+      title: "Technical achievement:",
+      content: "Reducing our infrastructure costs by 35% while improving system performance through our cloud optimization project."
+    },
+    likes: 91,
+    social: "TikTok",
+    featured: false
+  }
+];
+
 const EmployerBranding: React.FC = () => {
   const [shareStoryOpen, setShareStoryOpen] = useState(false);
   const [boostReviewsOpen, setBoostReviewsOpen] = useState(false);
   const [glassdoorRating, setGlassdoorRating] = useState(4.3);
   const [comparablyRating, setComparablyRating] = useState(8.7);
   const [employeeShares, setEmployeeShares] = useState(142);
+  const [visibleStories, setVisibleStories] = useState(4);
 
   const handleShareStory = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -70,6 +235,10 @@ const EmployerBranding: React.FC = () => {
       title: "Review boost initiated!",
       description: "Notifications have been sent to all employees.",
     });
+  };
+
+  const handleLoadMore = () => {
+    setVisibleStories(prev => Math.min(prev + 4, employeeStories.length));
   };
 
   return (
@@ -232,103 +401,66 @@ const EmployerBranding: React.FC = () => {
             </div>
             
             <div className="grid gap-6 md:grid-cols-2">
-              <Card>
-                <CardHeader className="pb-2">
-                  <div className="flex justify-between">
-                    <div className="flex items-center gap-3">
-                      <Avatar>
-                        <AvatarImage src="/lovable-uploads/cb168787-e2fc-48fc-a29a-8c867a963c05.png" alt="Maya Rodriguez" />
-                        <AvatarFallback>MR</AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <CardTitle className="text-lg">Maya Rodriguez</CardTitle>
-                        <CardDescription>Product Designer • 3 years</CardDescription>
+              {employeeStories.slice(0, visibleStories).map((story) => (
+                <Card key={story.id}>
+                  <CardHeader className="pb-2">
+                    <div className="flex justify-between">
+                      <div className="flex items-center gap-3">
+                        <Avatar>
+                          <AvatarImage src={story.avatar} alt={story.name} />
+                          <AvatarFallback>{story.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                        </Avatar>
+                        <div>
+                          <CardTitle className="text-lg">{story.name}</CardTitle>
+                          <CardDescription>{story.role} • {story.years}</CardDescription>
+                        </div>
                       </div>
+                      {story.featured && (
+                        <Badge variant="outline" className="bg-bucketlist-lightBlue text-bucketlist-blue">Featured</Badge>
+                      )}
                     </div>
-                    <Badge variant="outline" className="bg-bucketlist-lightBlue text-bucketlist-blue">Featured</Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <h3 className="text-lg font-medium mb-2">Why I Love Working at Pato's Holding Corp.</h3>
-                  <p className="text-muted-foreground mb-4">
-                    "The collaborative culture here has helped me grow as a designer. I've had the opportunity to work on impactful projects with amazing colleagues who are always willing to share their knowledge."
-                  </p>
-                  <div className="bg-bucketlist-lightBlue/20 p-3 rounded-md border border-bucketlist-lightBlue">
-                    <p className="text-sm font-medium text-bucketlist-blue">Career highlight:</p>
-                    <p className="text-sm">Leading the design for our award-winning customer portal that increased user satisfaction by 35%.</p>
-                  </div>
-                </CardContent>
-                <CardFooter className="flex justify-between">
-                  <div className="flex items-center gap-2">
-                    <Button variant="ghost" size="sm">
-                      <ThumbsUp className="mr-1 h-4 w-4" />
-                      142
-                    </Button>
-                  </div>
-                  <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex gap-1">
-                      <Linkedin className="h-4 w-4" />
-                      <span className="hidden sm:inline">LinkedIn</span>
-                    </Button>
-                    <Button variant="outline" size="sm">
-                      <Share2 className="mr-1 h-4 w-4" />
-                      Share
-                    </Button>
-                  </div>
-                </CardFooter>
-              </Card>
-              
-              <Card>
-                <CardHeader className="pb-2">
-                  <div className="flex justify-between">
-                    <div className="flex items-center gap-3">
-                      <Avatar>
-                        <AvatarImage src="/lovable-uploads/fed439f3-6d57-4068-af61-3f0562732bd4.png" alt="John Doe" />
-                        <AvatarFallback>JD</AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <CardTitle className="text-lg">John Doe</CardTitle>
-                        <CardDescription>Engineering Lead • 5 years</CardDescription>
-                      </div>
+                  </CardHeader>
+                  <CardContent>
+                    <h3 className="text-lg font-medium mb-2">{story.title}</h3>
+                    <p className="text-muted-foreground mb-4">
+                      "{story.content}"
+                    </p>
+                    <div className="bg-bucketlist-lightBlue/20 p-3 rounded-md border border-bucketlist-lightBlue">
+                      <p className="text-sm font-medium text-bucketlist-blue">{story.highlight.title}</p>
+                      <p className="text-sm">{story.highlight.content}</p>
                     </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <h3 className="text-lg font-medium mb-2">Growing with Pato's Tech Team</h3>
-                  <p className="text-muted-foreground mb-4">
-                    "What started as a junior role has evolved into leading a team of brilliant engineers. The company's commitment to professional development and work-life balance has been instrumental in my growth."
-                  </p>
-                  <div className="bg-bucketlist-lightBlue/20 p-3 rounded-md border border-bucketlist-lightBlue">
-                    <p className="text-sm font-medium text-bucketlist-blue">Favorite perk:</p>
-                    <p className="text-sm">The learning stipend that allowed me to attend tech conferences and take specialized courses.</p>
-                  </div>
-                </CardContent>
-                <CardFooter className="flex justify-between">
-                  <div className="flex items-center gap-2">
-                    <Button variant="ghost" size="sm">
-                      <ThumbsUp className="mr-1 h-4 w-4" />
-                      98
-                    </Button>
-                  </div>
-                  <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex gap-1">
-                      <Tiktok className="h-4 w-4" />
-                      <span className="hidden sm:inline">TikTok</span>
-                    </Button>
-                    <Button variant="outline" size="sm">
-                      <Share2 className="mr-1 h-4 w-4" />
-                      Share
-                    </Button>
-                  </div>
-                </CardFooter>
-              </Card>
+                  </CardContent>
+                  <CardFooter className="flex justify-between">
+                    <div className="flex items-center gap-2">
+                      <Button variant="ghost" size="sm">
+                        <ThumbsUp className="mr-1 h-4 w-4" />
+                        {story.likes}
+                      </Button>
+                    </div>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" className="flex gap-1">
+                        {story.social === "LinkedIn" && <Linkedin className="h-4 w-4" />}
+                        {story.social === "Instagram" && <Instagram className="h-4 w-4" />}
+                        {story.social === "TikTok" && <Tiktok className="h-4 w-4" />}
+                        <span className="hidden sm:inline">{story.social}</span>
+                      </Button>
+                      <Button variant="outline" size="sm">
+                        <Share2 className="mr-1 h-4 w-4" />
+                        Share
+                      </Button>
+                    </div>
+                  </CardFooter>
+                </Card>
+              ))}
             </div>
             
-            <div className="text-center mt-6">
-              <Button variant="outline" className="bg-white">
-                Load More Stories
-              </Button>
-            </div>
+            {visibleStories < employeeStories.length && (
+              <div className="text-center mt-6">
+                <Button variant="outline" className="bg-white" onClick={handleLoadMore}>
+                  Load More Stories
+                </Button>
+              </div>
+            )}
           </div>
         </TabsContent>
         
