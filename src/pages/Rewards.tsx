@@ -197,6 +197,226 @@ const Rewards: React.FC = () => {
                 <Button variant="outline">Need More Points</Button>
               </CardFooter>
             </Card>
+            
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1466721591366-2d5fba72006d?auto=format&fit=crop&q=80&w=800"
+                    alt="Safari adventure" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Safari Adventure</CardTitle>
+                <CardDescription className="mt-2">
+                  Experience an unforgettable guided safari tour at a renowned nature reserve
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">2500 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1493962853295-0fd70327578a?auto=format&fit=crop&q=80&w=800"
+                    alt="Mountain hiking" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Mountain Hiking Expedition</CardTitle>
+                <CardDescription className="mt-2">
+                  Challenge yourself with a guided hiking trip through scenic mountain trails
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1800 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1485833077593-4278bba3f11f?auto=format&fit=crop&q=80&w=800"
+                    alt="Forest retreat" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Forest Retreat Weekend</CardTitle>
+                <CardDescription className="mt-2">
+                  Escape to a peaceful cabin in the woods for a weekend of relaxation and nature
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">2200 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1438565434616-3ef039228b15?auto=format&fit=crop&q=80&w=800"
+                    alt="Rock climbing" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Rock Climbing Adventure</CardTitle>
+                <CardDescription className="mt-2">
+                  Test your limits with a full day of rock climbing with professional instructors
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1600 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1469041797191-50ace28483c3?auto=format&fit=crop&q=80&w=800"
+                    alt="Desert tour" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Desert Camel Tour</CardTitle>
+                <CardDescription className="mt-2">
+                  Embark on an unforgettable desert adventure with a guided camel ride tour
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1700 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1452378174528-3090a4bba7b2?auto=format&fit=crop&q=80&w=800"
+                    alt="Horseback riding" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Horseback Riding Lesson</CardTitle>
+                <CardDescription className="mt-2">
+                  Learn horseback riding fundamentals with expert trainers in a scenic countryside
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">900 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1487252665478-49b61b47f302?auto=format&fit=crop&q=80&w=800"
+                    alt="Reptile park" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Exotic Reptile Experience</CardTitle>
+                <CardDescription className="mt-2">
+                  Get up close with fascinating reptiles in this guided educational tour
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">800 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1501286353178-1ec881214838?auto=format&fit=crop&q=80&w=800"
+                    alt="Primate sanctuary" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Primate Sanctuary Tour</CardTitle>
+                <CardDescription className="mt-2">
+                  Visit a sanctuary dedicated to rescued primates and learn about conservation
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1100 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1501901609772-df0fd2994642?auto=format&fit=crop&q=80&w=800"
+                    alt="Farm experience" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Organic Farm Experience</CardTitle>
+                <CardDescription className="mt-2">
+                  Spend a day at an organic farm learning sustainable practices and harvesting food
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">750 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1501901609772-df0fd2994642?auto=format&fit=crop&q=80&w=800"
+                    alt="Hot air balloon" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Hot Air Balloon Ride</CardTitle>
+                <CardDescription className="mt-2">
+                  Soar above stunning landscapes in a magical hot air balloon adventure
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">2800 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
           </div>
         </TabsContent>
         
