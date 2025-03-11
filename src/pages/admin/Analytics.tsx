@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -10,7 +11,7 @@ const Analytics: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("activity");
   
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-6 animate-fade-in pb-10">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <h1 className="text-2xl font-bold tracking-tight">Analytics Dashboard</h1>
         <div className="flex gap-2">
@@ -75,7 +76,7 @@ const Analytics: React.FC = () => {
           </div>
           
           {/* Recognition Trends */}
-          <Card>
+          <Card className="mb-8">
             <CardHeader>
               <CardTitle>Recognition Trends</CardTitle>
               <CardDescription>
@@ -91,8 +92,9 @@ const Analytics: React.FC = () => {
                 </TabsList>
                 
                 <TabsContent value="recognitions" className="mt-0">
-                  <div className="h-[300px] w-full" style={{ minHeight: '300px' }}>
+                  <div className="w-full">
                     <LineChart
+                      height={300}
                       data={[
                         { name: 'Jan', value: 100 },
                         { name: 'Feb', value: 120 },
@@ -116,8 +118,9 @@ const Analytics: React.FC = () => {
                 </TabsContent>
                 
                 <TabsContent value="engagement" className="mt-0">
-                  <div className="h-[300px] w-full" style={{ minHeight: '300px' }}>
+                  <div className="w-full">
                     <BarChart
+                      height={300}
                       data={[
                         { name: 'Engineering', value: 84 },
                         { name: 'Sales', value: 92 },
@@ -135,8 +138,9 @@ const Analytics: React.FC = () => {
                 </TabsContent>
                 
                 <TabsContent value="redemptions" className="mt-0">
-                  <div className="h-[300px] w-full flex items-center justify-center" style={{ minHeight: '300px' }}>
+                  <div className="w-full flex items-center justify-center">
                     <PieChart
+                      height={300}
                       data={[
                         { name: 'Gift Cards', value: 45 },
                         { name: 'Company Swag', value: 20 },
@@ -153,7 +157,7 @@ const Analytics: React.FC = () => {
           </Card>
           
           {/* Key Events Tracking */}
-          <Card>
+          <Card className="mb-8">
             <CardHeader className="flex flex-row items-center justify-between">
               <div>
                 <CardTitle>Key Events & Milestones</CardTitle>
@@ -271,7 +275,7 @@ const Analytics: React.FC = () => {
           </Card>
           
           {/* Department Distribution */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <Card>
               <CardHeader>
                 <CardTitle>Top Values Recognized</CardTitle>
@@ -280,8 +284,9 @@ const Analytics: React.FC = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="h-[240px]" style={{ minHeight: '240px' }}>
+                <div className="w-full">
                   <BarChart
+                    height={240}
                     data={[
                       { name: 'Teamwork', value: 35 },
                       { name: 'Excellence', value: 27 },
@@ -305,8 +310,9 @@ const Analytics: React.FC = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="h-[240px] flex items-center justify-center" style={{ minHeight: '240px' }}>
+                <div className="w-full flex items-center justify-center">
                   <PieChart
+                    height={240}
                     data={[
                       { name: 'Engineering', value: 30 },
                       { name: 'Sales', value: 25 },
@@ -686,4 +692,3 @@ const Analytics: React.FC = () => {
 };
 
 export default Analytics;
-

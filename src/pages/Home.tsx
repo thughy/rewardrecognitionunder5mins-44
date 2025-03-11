@@ -10,7 +10,7 @@ import { RecentRecognitions } from '@/components/RecentRecognitions';
 
 const Home: React.FC = () => {
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-6 animate-fade-in pb-8">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold tracking-tight">Welcome, John!</h1>
         <div className="flex items-center gap-2 bg-beekeeper-light rounded-lg px-3 py-1.5">
@@ -91,7 +91,9 @@ const Home: React.FC = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <RecentRecognitions />
+              <div className="min-h-[200px]">
+                <RecentRecognitions />
+              </div>
               <div className="mt-4 text-center">
                 <Button variant="outline" asChild>
                   <Link to="/feed">View All Recognitions</Link>

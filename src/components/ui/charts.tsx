@@ -31,6 +31,7 @@ interface ChartProps {
   showLegend?: boolean;
   yAxisWidth?: number;
   showGridLines?: boolean;
+  height?: number | string;
 }
 
 interface BarChartProps extends ChartProps {
@@ -50,6 +51,7 @@ export const BarChart = ({
   yAxisWidth = 40,
   showGridLines = true,
   layout = "vertical",
+  height = 300,
 }: BarChartProps) => {
   const isHorizontal = layout === "horizontal";
 
@@ -63,6 +65,7 @@ export const BarChart = ({
           ])
         ),
       }}
+      style={{ height }}
     >
       <RechartsBarChart
         data={data}
@@ -140,6 +143,7 @@ export const LineChart = ({
   showLegend = true,
   yAxisWidth = 40,
   showGridLines = true,
+  height = 300,
 }: ChartProps) => {
   return (
     <ChartContainer
@@ -151,6 +155,7 @@ export const LineChart = ({
           ])
         ),
       }}
+      style={{ height }}
     >
       <RechartsLineChart
         data={data}
@@ -209,6 +214,7 @@ export const PieChart = ({
   nameKey = "name",
   innerRadius = 0,
   outerRadius = 80,
+  height = 300,
 }: PieChartProps) => {
   return (
     <ChartContainer
@@ -220,6 +226,7 @@ export const PieChart = ({
           ])
         ),
       }}
+      style={{ height }}
     >
       <RechartsPieChart margin={{ top: 10, right: 10, left: 10, bottom: 10 }}>
         <Pie
