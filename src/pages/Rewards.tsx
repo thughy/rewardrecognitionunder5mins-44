@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Gift, Coffee, ShoppingBag, Ticket, Trophy, CreditCard, Music, Home, ShoppingCart, Shirt, Apple, Utensils, Car, Headphones } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
-const Rewards: React.FC = () => {
+const Rewards = () => {
   return (
     <div className="space-y-6 animate-fade-in">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -646,4 +646,4 @@ const Rewards: React.FC = () => {
               <CardHeader className="pb-2">
                 <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit
