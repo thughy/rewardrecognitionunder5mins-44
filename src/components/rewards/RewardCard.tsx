@@ -16,9 +16,9 @@ const RewardCard = ({ title, description, image, imageAlt, points, availablePoin
   const canRedeem = availablePoints >= points;
 
   return (
-    <Card className="hover:shadow-md transition-shadow duration-300">
+    <Card className="hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
       <CardHeader className="pb-2">
-        <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+        <div className="w-full h-40 bg-gray-100 rounded-md overflow-hidden">
           <img 
             src={image}
             alt={imageAlt} 
@@ -26,7 +26,7 @@ const RewardCard = ({ title, description, image, imageAlt, points, availablePoin
           />
         </div>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex-grow">
         <CardTitle className="text-xl">{title}</CardTitle>
         <CardDescription className="mt-2">
           {description}
