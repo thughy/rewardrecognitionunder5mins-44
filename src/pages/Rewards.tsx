@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
-import { Gift, Coffee, ShoppingBag, Ticket, Trophy } from 'lucide-react';
+import { Gift, Coffee, ShoppingBag, Ticket, Trophy, CreditCard } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 const Rewards: React.FC = () => {
@@ -465,6 +466,226 @@ const Rewards: React.FC = () => {
                 <Button variant="outline">Need More Points</Button>
               </CardFooter>
             </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800"
+                    alt="Premium laptop backpack" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Premium Laptop Backpack</CardTitle>
+                <CardDescription className="mt-2">
+                  Durable, water-resistant backpack with dedicated laptop compartment
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">800 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800"
+                    alt="Mechanical keyboard" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Mechanical Keyboard</CardTitle>
+                <CardDescription className="mt-2">
+                  Premium mechanical keyboard with customizable RGB lighting
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1200 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+                    alt="Ergonomic desk chair" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Ergonomic Desk Chair</CardTitle>
+                <CardDescription className="mt-2">
+                  Comfortable office chair with lumbar support for long work days
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">2500 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+                    alt="Wireless charging pad" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Wireless Charging Pad</CardTitle>
+                <CardDescription className="mt-2">
+                  Convenient wireless charging for all your compatible devices
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">500 Points</div>
+                <Button>Redeem</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=800"
+                    alt="Ultra-wide monitor" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Ultra-Wide Monitor</CardTitle>
+                <CardDescription className="mt-2">
+                  Boost productivity with this expansive ultra-wide display
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">3500 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=800"
+                    alt="Portable Bluetooth speaker" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Portable Bluetooth Speaker</CardTitle>
+                <CardDescription className="mt-2">
+                  Water-resistant speaker with premium sound quality for indoor and outdoor use
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">750 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=800"
+                    alt="Noise-cancelling earbuds" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Noise-Cancelling Earbuds</CardTitle>
+                <CardDescription className="mt-2">
+                  Premium earbuds with active noise cancellation for immersive listening
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1300 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=800"
+                    alt="Smart home hub" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Smart Home Hub</CardTitle>
+                <CardDescription className="mt-2">
+                  Control your smart home devices with voice commands and automation
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1500 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=800"
+                    alt="Premium coffee maker" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Premium Coffee Maker</CardTitle>
+                <CardDescription className="mt-2">
+                  High-end coffee machine for barista-quality beverages at home
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1700 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=800"
+                    alt="Desk organizer set" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">Desk Organizer Set</CardTitle>
+                <CardDescription className="mt-2">
+                  Premium desk accessories to keep your workspace tidy and efficient
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">450 Points</div>
+                <Button>Redeem</Button>
+              </CardFooter>
+            </Card>
           </div>
         </TabsContent>
         
@@ -513,6 +734,226 @@ const Rewards: React.FC = () => {
                 <Button>Redeem</Button>
               </CardFooter>
             </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=800"
+                    alt="Starbucks gift card" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">$25 Starbucks Gift Card</CardTitle>
+                <CardDescription className="mt-2">
+                  Enjoy your favorite coffee and snacks at Starbucks
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">500 Points</div>
+                <Button>Redeem</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&q=80&w=800"
+                    alt="AMC Theatres gift card" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">$30 AMC Theatres Gift Card</CardTitle>
+                <CardDescription className="mt-2">
+                  Enjoy the latest movies at your local AMC theatre
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">600 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&q=80&w=800"
+                    alt="Best Buy gift card" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">$50 Best Buy Gift Card</CardTitle>
+                <CardDescription className="mt-2">
+                  Shop the latest electronics and tech gadgets
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1000 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+                    alt="Whole Foods gift card" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">$40 Whole Foods Gift Card</CardTitle>
+                <CardDescription className="mt-2">
+                  Stock up on organic groceries and healthy options
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">800 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&q=80&w=800"
+                    alt="Uber gift card" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">$35 Uber Gift Card</CardTitle>
+                <CardDescription className="mt-2">
+                  For rides or food delivery through Uber and Uber Eats
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">700 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+                    alt="Spotify gift card" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">$30 Spotify Gift Card</CardTitle>
+                <CardDescription className="mt-2">
+                  Enjoy premium music streaming without interruptions
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">600 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&q=80&w=800"
+                    alt="Home Depot gift card" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">$50 Home Depot Gift Card</CardTitle>
+                <CardDescription className="mt-2">
+                  For home improvement projects and supplies
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1000 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+                    alt="DoorDash gift card" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">$30 DoorDash Gift Card</CardTitle>
+                <CardDescription className="mt-2">
+                  Get your favorite food delivered right to your door
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">600 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&q=80&w=800"
+                    alt="Nike gift card" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">$50 Nike Gift Card</CardTitle>
+                <CardDescription className="mt-2">
+                  Shop athletic apparel, footwear, and accessories
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1000 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-2">
+                <div className="w-full h-40 bg-muted rounded-md overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800"
+                    alt="Apple gift card" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardTitle className="text-xl">$50 Apple Gift Card</CardTitle>
+                <CardDescription className="mt-2">
+                  Use for apps, games, music, movies, and Apple products
+                </CardDescription>
+              </CardContent>
+              <CardFooter className="flex justify-between items-center pt-0">
+                <div className="font-bold text-bucketlist-blue">1000 Points</div>
+                <Button variant="outline">Need More Points</Button>
+              </CardFooter>
+            </Card>
           </div>
         </TabsContent>
       </Tabs>
@@ -521,3 +962,4 @@ const Rewards: React.FC = () => {
 };
 
 export default Rewards;
+
