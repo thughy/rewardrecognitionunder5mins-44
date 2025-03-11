@@ -16,6 +16,13 @@ import Analytics from "./pages/admin/Analytics";
 import Settings from "./pages/admin/Settings";
 import NotFound from "./pages/NotFound";
 
+// Opportunity pages
+import ReferralProgram from "./pages/opportunities/ReferralProgram";
+import ShiftIncentives from "./pages/opportunities/ShiftIncentives";
+import LearningDevelopment from "./pages/opportunities/LearningDevelopment";
+import WellnessChallenges from "./pages/opportunities/WellnessChallenges";
+import Volunteering from "./pages/opportunities/Volunteering";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -33,6 +40,14 @@ const App = () => (
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/surveys" element={<Surveys />} />
             <Route path="/employer-branding" element={<EmployerBranding />} />
+            
+            {/* Opportunities Routes */}
+            <Route path="/opportunities/referrals" element={<ReferralProgram />} />
+            <Route path="/opportunities/shifts" element={<ShiftIncentives />} />
+            <Route path="/opportunities/learning" element={<LearningDevelopment />} />
+            <Route path="/opportunities/wellness" element={<WellnessChallenges />} />
+            <Route path="/opportunities/volunteering" element={<Volunteering />} />
+            
             <Route path="/admin/analytics" element={<Analytics />} />
             <Route path="/admin/settings" element={<Settings />} />
           </Route>

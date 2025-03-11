@@ -12,7 +12,12 @@ import {
   MessageSquarePlus, 
   Settings, 
   Zap,
-  Briefcase
+  Briefcase,
+  UserPlus,
+  Clock,
+  GraduationCap,
+  HeartPulse,
+  Handshake
 } from 'lucide-react';
 import {
   Sidebar,
@@ -63,8 +68,38 @@ const mainNavItems = [
   {
     title: 'Employer Branding',
     url: '/employer-branding',
-    icon: Briefcase, // Changed from Flag to Briefcase for better representation
+    icon: Briefcase,
     highlight: true,
+  },
+];
+
+// New Opportunities section
+const opportunitiesNavItems = [
+  {
+    title: 'Referral Program',
+    url: '/opportunities/referrals',
+    icon: UserPlus,
+    highlight: true,
+  },
+  {
+    title: 'Shift Incentives',
+    url: '/opportunities/shifts',
+    icon: Clock,
+  },
+  {
+    title: 'Learning & Development',
+    url: '/opportunities/learning',
+    icon: GraduationCap,
+  },
+  {
+    title: 'Wellness Challenges',
+    url: '/opportunities/wellness',
+    icon: HeartPulse,
+  },
+  {
+    title: 'Volunteering',
+    url: '/opportunities/volunteering',
+    icon: Handshake,
   },
 ];
 
@@ -107,6 +142,34 @@ export function AppSidebar() {
                     className={cn(
                       location.pathname === item.url && "bg-accent text-accent-foreground",
                       item.highlight && "relative overflow-visible after:absolute after:top-1 after:right-1 after:h-2 after:w-2 after:rounded-full after:bg-blue-500 after:animate-pulse"
+                    )}
+                  >
+                    <Link to={item.url}>
+                      <item.icon size={20} />
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        {/* New Opportunities Section */}
+        <SidebarGroup>
+          <SidebarGroupLabel className="flex items-center gap-1">
+            <Award size={16} className="text-bucketlist-blue" />
+            <span>Opportunities</span>
+          </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {opportunitiesNavItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton
+                    asChild
+                    className={cn(
+                      location.pathname === item.url && "bg-accent text-accent-foreground",
+                      item.highlight && "relative overflow-visible after:absolute after:top-1 after:right-1 after:h-2 after:w-2 after:rounded-full after:bg-green-500 after:animate-pulse"
                     )}
                   >
                     <Link to={item.url}>
